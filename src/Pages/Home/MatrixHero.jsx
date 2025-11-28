@@ -46,7 +46,7 @@ const MatrixHero = () => {
           transition={{ duration: 0.8 }}
           className="mb-16 text-center"
         >
-          <h1 className="mb-8 bg-linear-to-r from-purple-600 via-purple-500 to-purple-600 bg-clip-text text-5xl font-bold text-transparent md:text-6xl">
+          <h1 className="mb-8 bg-linear-to-r from-purple-600 via-purple-500 to-purple-600 bg-clip-text text-5xl font-bold text-transparent md:text-6xl lg:text-8xl">
             What is Matrix MLM Software?
           </h1>
           <p className="mx-auto mb-10 max-w-4xl text-xl leading-relaxed text-gray-600 max-sm:text-justify">

@@ -54,12 +54,12 @@ const DirectSellingSoftware = () => {
           transition={{ duration: 0.8 }}
           className="mb-12 text-center"
         >
-          <h1 className="mb-4 text-4xl font-bold md:text-5xl">
+          <h1 className="mb-4 text-4xl font-bold md:text-5xl lg:text-8xl">
             <span className="bg-linear-to-r from-purple-500 to-purple-600 bg-clip-text text-transparent">
               Smartchain Studio
             </span>
           </h1>
-          <h2 className="mb-8 text-2xl font-bold text-gray-800 md:text-3xl">
+          <h2 className="mb-8 text-2xl font-bold text-gray-800 md:text-3xl lg:text-6xl">
             Direct Selling Software
           </h2>
         </motion.div>

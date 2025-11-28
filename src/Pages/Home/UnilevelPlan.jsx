@@ -84,7 +84,7 @@ const UnilevelPlan = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="mb-16 text-center"
         >
-          <h1 className="mb-6 text-5xl font-bold md:text-6xl">
+          <h1 className="mb-6 text-5xl font-bold md:text-6xl lg:text-8xl">
             <span className="bg-linear-to-r from-purple-600 via-purple-500 to-purple-600 bg-clip-text text-transparent">
               What is Unilevel MLM Plan?
             </span>

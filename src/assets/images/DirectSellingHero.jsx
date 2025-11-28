@@ -46,7 +46,7 @@ const DirectSellingHero = () => {
           transition={{ duration: 0.8 }}
           className="mb-16 text-center"
         >
-          <h1 className="mb-8 bg-linear-to-r from-blue-400 via-cyan-300 to-blue-400 bg-clip-text text-5xl font-bold text-transparent md:text-6xl">
+          <h1 className="mb-8 bg-linear-to-r from-blue-400 via-cyan-300 to-blue-400 bg-clip-text text-5xl font-bold text-transparent md:text-6xl lg:text-8xl">
             Direct Selling Software
           </h1>
           <p className="mx-auto mb-10 max-w-4xl text-xl leading-relaxed text-gray-300">

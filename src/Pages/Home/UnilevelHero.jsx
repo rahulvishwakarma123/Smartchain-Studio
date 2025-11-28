@@ -46,7 +46,7 @@ const UniLevelHero = () => {
           transition={{ duration: 0.8 }}
           className="mb-16 text-center"
         >
-          <h1 className="mb-8 bg-linear-to-r from-purple-600 via-purple-500 to-purple-600 bg-clip-text text-5xl font-bold text-transparent md:text-6xl">
+          <h1 className="mb-8 bg-linear-to-r from-purple-600 via-purple-500 to-purple-600 bg-clip-text text-5xl font-bold text-transparent md:text-6xl lg:text-8xl">
             What is Unilevel MLM Software?
           </h1>
           <p className="mx-auto mb-10 max-w-4xl text-xl leading-relaxed text-gray-600 max-sm:text-justify">
@@ -101,7 +101,7 @@ const UniLevelHero = () => {
           >
             <motion.h2
               variants={itemVariants}
-              className="text-4xl leading-tight font-bold md:text-5xl"
+              className="text-4xl leading-tight font-bold md:text-5xl max-sm:text-center"
             >
               Solve Your MLM Challenges With Our{" "}
               <span className="bg-linear-to-r from-purple-500 to-purple-600 bg-clip-text text-transparent">
@@ -119,7 +119,7 @@ const UniLevelHero = () => {
               scale your MLM empire efficiently.
             </motion.p>
 
-            <motion.div variants={itemVariants} className="space-y-4">
+            {/* <motion.div variants={itemVariants} className="space-y-4">
               <a href="https://wa.me/9202983564">
                 <motion.button
                   whileHover={{
@@ -141,7 +141,7 @@ const UniLevelHero = () => {
               >
                 no credit, no problem
               </motion.p>
-            </motion.div>
+            </motion.div> */}
           </motion.div>
 
           {/* Right Column - Image with Floating Elements */}
