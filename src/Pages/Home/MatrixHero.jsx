@@ -1,6 +1,17 @@
 import React from "react";
 import { motion } from "framer-motion";
-import binaryHeroImage from "../../assets/dashboard/xpeo.user.jpg";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/autoplay";
+
+// Import your brand images
+import visaLogo from '../../assets/dashboard/biyoliva.admin.jpg'
+import tataLogo from '../../assets/dashboard/yumeko.dashboard.jpg'
+import jnLogo from '../../assets/dashboard/biyoliva.admin.jpg'
+import kpmgLogo from '../../assets/dashboard/biyoliva.user.jpg'
+import mettleLogo from '../../assets/dashboard/xpeo.user.jpg'
+import zyuusLogo from '../../assets/dashboard/yumeko.dashboard.jpg'
 
 const MatrixHero = () => {
   const containerVariants = {
@@ -25,14 +36,54 @@ const MatrixHero = () => {
     },
   };
 
-  const floatAnimation = {
-    animate: {
-      y: [0, -15, 0],
-      transition: {
-        duration: 4,
-        repeat: Infinity,
-        ease: "easeInOut",
-      },
+  // Brand logos arrays for each column
+  const column1Logos = [
+    { id: 1, src: visaLogo, alt: "Visa" },
+    { id: 2, src: tataLogo, alt: "Tata" },
+    { id: 3, src: jnLogo, alt: "JN" },
+    { id: 4, src: kpmgLogo, alt: "KPMG" },
+    { id: 5, src: mettleLogo, alt: "Mettle" },
+    { id: 6, src: zyuusLogo, alt: "ZyUUS" },
+  ];
+
+  const column2Logos = [
+    { id: 7, src: mettleLogo, alt: "Mettle" },
+    { id: 8, src: kpmgLogo, alt: "KPMG" },
+    { id: 9, src: zyuusLogo, alt: "ZyUUS" },
+    { id: 10, src: visaLogo, alt: "Visa" },
+    { id: 11, src: tataLogo, alt: "Tata" },
+    { id: 12, src: jnLogo, alt: "JN" },
+  ];
+
+  const column3Logos = [
+    { id: 13, src: jnLogo, alt: "JN" },
+    { id: 14, src: mettleLogo, alt: "Mettle" },
+    { id: 15, src: visaLogo, alt: "Visa" },
+    { id: 16, src: zyuusLogo, alt: "ZyUUS" },
+    { id: 17, src: kpmgLogo, alt: "KPMG" },
+    { id: 18, src: tataLogo, alt: "Tata" },
+  ];
+
+  const swiperParams = {
+    modules: [Autoplay],
+    direction: "vertical",
+    slidesPerView: 3,
+    spaceBetween: 10,
+    loop: true,
+    autoplay: {
+      delay: 0,
+      disableOnInteraction: false,
+    },
+    speed: 3000,
+    allowTouchMove: false,
+  };
+
+  const swiperParamsReverse = {
+    ...swiperParams,
+    autoplay: {
+      delay: 0,
+      disableOnInteraction: false,
+      reverseDirection: true,
     },
   };
 
@@ -89,34 +140,68 @@ const MatrixHero = () => {
         </motion.div>
 
         <div className="mt-20 grid grid-cols-1 items-center gap-16 lg:grid-cols-2">
-          {/* Left Column - Image with Floating Elements */}
+          {/* Left Column - Brand Logo Swiper Only */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="relative"
+            className="flex h-full items-center justify-center"
           >
-            <div className="relative overflow-hidden rounded-3xl border-2 border-purple-200 shadow-xl shadow-purple-200/50">
-              <img
-                src={binaryHeroImage}
-                alt="Binary MLM Software Dashboard"
-                className="h-auto w-full transform object-cover transition-transform duration-700 hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-linear-to-t from-purple-100/40 via-transparent to-transparent"></div>
+            {/* Brand Logo Swiper Container - Full Height */}
+            <div className="w-full overflow-hidden rounded-3xl border-2 border-purple-200 bg-white/80 backdrop-blur-sm shadow-xl shadow-purple-200/50">
+              <div className="flex h-80 md:h-96 lg:h-[500px]">
+                {/* Column 1 - Moves Up */}
+                <div className="flex-1 overflow-hidden border-r border-purple-100">
+                  <Swiper {...swiperParams} className="h-full">
+                    {column1Logos.map((logo) => (
+                      <SwiperSlide key={`col1-${logo.id}`}>
+                        <div className="flex h-full w-full items-center justify-center p-4">
+                          <img 
+                            src={logo.src} 
+                            alt={logo.alt} 
+                            className="max-h-16 w-auto object-contain opacity-80 hover:opacity-100 transition-all duration-300 hover:scale-110"
+                          />
+                        </div>
+                      </SwiperSlide>
+                    ))}
+                  </Swiper>
+                </div>
+
+                {/* Column 2 - Moves Down */}
+                <div className="flex-1 overflow-hidden border-r border-purple-100">
+                  <Swiper {...swiperParamsReverse} className="h-full">
+                    {column2Logos.map((logo) => (
+                      <SwiperSlide key={`col2-${logo.id}`}>
+                        <div className="flex h-full w-full items-center justify-center p-4">
+                          <img 
+                            src={logo.src} 
+                            alt={logo.alt} 
+                            className="max-h-16 w-auto object-contain opacity-80 hover:opacity-100 transition-all duration-300 hover:scale-110"
+                          />
+                        </div>
+                      </SwiperSlide>
+                    ))}
+                  </Swiper>
+                </div>
+
+                {/* Column 3 - Moves Up */}
+                <div className="flex-1 overflow-hidden">
+                  <Swiper {...swiperParams} className="h-full">
+                    {column3Logos.map((logo) => (
+                      <SwiperSlide key={`col3-${logo.id}`}>
+                        <div className="flex h-full w-full items-center justify-center p-4">
+                          <img 
+                            src={logo.src} 
+                            alt={logo.alt} 
+                            className="max-h-16 w-auto object-contain opacity-80 hover:opacity-100 transition-all duration-300 hover:scale-110"
+                          />
+                        </div>
+                      </SwiperSlide>
+                    ))}
+                  </Swiper>
+                </div>
+              </div>
             </div>
-
-            {/* Floating Feature Badges */}
-            
-
-            {/* <motion.div
-              variants={floatAnimation}
-              animate="animate"
-              transition={{ delay: 0.5 }}
-              className="absolute -right-6 -bottom-6 rounded-xl border border-purple-300/50 bg-purple-500 px-6 py-3 text-white shadow-lg"
-            >
-              <div className="text-sm font-semibold">Genealogy Reports</div>
-            </motion.div> */}
-
           </motion.div>
 
           {/* Right Column - Content */}
