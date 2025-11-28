@@ -76,7 +76,7 @@ const Hero = () => {
             className="mb-4 flex items-center justify-start sm:justify-start"
             variants={itemVariants}
           >
-            <span className="text-center text-2xl font-bold text-gray-800 md:text-6xl lg:text-8xl">
+            <span className="text-center text-2xl font-bold text-gray-800 md:text-6xl">
               The Leading
             </span>
             <motion.img
@@ -85,7 +85,7 @@ const Hero = () => {
               alt="handshake gif"
               variants={handshakeVariants}
             />
-            <span className="text-center text-2xl font-bold text-black md:text-6xl lg:text-8xl">
+            <span className="text-center text-2xl font-bold text-black md:text-6xl">
               MLM
             </span>
           </motion.h2>
@@ -103,7 +103,7 @@ const Hero = () => {
           </motion.h1>
 
           <motion.h2
-            className="mt-6 mb-6 text-4xl font-bold text-black sm:text-5xl md:mt-8 md:mb-8 md:text-6xl lg:text-8xl"
+            className="mt-6 mb-6 text-4xl font-bold text-black sm:text-5xl md:mt-8 md:mb-8 md:text-6xl"
             variants={itemVariants}
           >
             Company in India
