@@ -1,6 +1,7 @@
 import React from "react";
 import { bulb } from "../../assets/images";
 import { BlockchainServiceCard, Button } from "../../components";
+import { motion } from "framer-motion";
 
 const cardData = [
     {
@@ -36,30 +37,82 @@ const cardData = [
         classname: 'from-red-600 to-red-300 hover:shadow-red-500/90 hover:shadow-2xl',
     },
 ]
+
+const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+        opacity: 1,
+        transition: {
+            staggerChildren: 0.1
+        }
+    }
+};
+
+const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 0.6,
+            ease: "easeOut"
+        }
+    }
+};
+
 const BlockchianServices = () => {
   return (
-    <div className="p-10 flex flex-col gap-10 items-center">
+    <div className="p-4 md:p-10 flex flex-col gap-6 md:gap-10 items-center">
         {/* 1st  */}
-      <h1 className="pb-10 text-9xl font-bold tracking-tighter self-start">
+      <motion.h1 
+        className="pb-6 md:pb-10 text-4xl md:text-6xl lg:text-9xl font-bold tracking-tighter self-start"
+        initial={{ opacity: 0, x: -50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.7 }}
+        viewport={{ once: true, margin: "-100px" }}
+      >
         BLOCKCHAIN SERVICES
-      </h1>
+      </motion.h1>
 
         {/* 2nd */}
-      <div className="flex gap-5">
-        <div className="text-9xl font-bold text-purple-700 text-nowrap ">
+      <motion.div 
+        className="flex flex-col lg:flex-row gap-5"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, delay: 0.2 }}
+        viewport={{ once: true, margin: "-50px" }}
+      >
+        <div className="text-4xl md:text-6xl lg:text-9xl font-bold text-purple-700">
           WE PROVIDE
         </div>
-        <p className="text-xl leading-9 pt-2">Our commitment to innovation extends to harnessing the power of blockchain technology to enhance the security, transparency, and efficiency of MLM businesses.</p>
-      </div>
+        <p className="text-lg md:text-xl leading-7 md:leading-9 pt-2 lg:pt-10">
+          Our commitment to innovation extends to harnessing the power of blockchain technology to enhance the security, transparency, and efficiency of MLM businesses.
+        </p>
+      </motion.div>
 
       {/* 3rd  */}
-      <div className="grid grid-cols-4 grid-rows-2 gap-x-3 gap-y-6">
-        {cardData.map((card) => (
-            <BlockchainServiceCard text={card.text} className={card.classname} image={bulb}/>
+      <motion.div 
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-50px" }}
+      >
+        {cardData.map((card, index) => (
+            <motion.div key={index} variants={itemVariants} className="w-full">
+                <BlockchainServiceCard text={card.text} className={card.classname} image={bulb}/>
+            </motion.div>
         ))}
-      </div>
+      </motion.div>
 
-      <Button text={'Reques a Call back Now'} />
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.3 }}
+        viewport={{ once: true, margin: "-50px" }}
+      >
+        <Button text={'Request a Call back Now'} />
+      </motion.div>
     </div>
   );
 };

@@ -66,7 +66,7 @@ const AchieveMore = () => {
         variants={containerVariants}
       >
         <motion.h1 
-          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-center md:text-left"
+          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-left md:text-left"
           variants={itemVariants}
         >
           Achieve More with the Right MLM Partner: Trusted Products, Happy Customers, and Industry Expertise
