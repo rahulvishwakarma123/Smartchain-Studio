@@ -16,7 +16,6 @@ import MonolinePlan from './MonolinePlan.png'
 import MonolinePlanLogo from './MonolinePlanLogo.png'
 import MLMimage from './MLMimage.png'
 import bulb from './bulb.png'
-import BlockchainLeft from './BlockchainLeft.png'
 import BlockchainMiddle from './BlockchainMiddle.png'
 import BlockchainRight from './BlockchainRight.png'
 import logo from './logo.png'
@@ -45,7 +44,6 @@ export {
   MonolinePlanLogo,
   MLMimage,
   bulb,
-  BlockchainLeft,
   BlockchainMiddle,
   BlockchainRight,
   logo

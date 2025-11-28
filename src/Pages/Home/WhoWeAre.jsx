@@ -1,10 +1,10 @@
 import React from "react";
 import { Button } from "../../components";
 import {
-  BlockchainLeft,
   BlockchainMiddle,
   BlockchainRight,
 } from "../../assets/images";
+import BlockchainLeft from '../../assets/images/blockchainLeft.png'
 import { StarIcon } from "lucide-react";
 import { motion } from "framer-motion";
 
