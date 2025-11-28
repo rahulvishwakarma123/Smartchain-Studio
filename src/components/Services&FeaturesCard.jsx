@@ -44,7 +44,7 @@ const ServicesFeaturesCard = ({ id, heading, desc, tag, buttonText }) => {
           <h1 className="text-2xl font-bold text-purple-700 md:text-3xl lg:text-4xl">
             {heading}
           </h1>
-          <div className="mt-4 block lg:hidden">
+          <div className="mt-7 block self-start max-sm:hidden">
             <Button text={buttonText} className={"self-start"} />
           </div>
         </div>
@@ -77,8 +77,8 @@ const ServicesFeaturesCard = ({ id, heading, desc, tag, buttonText }) => {
         </div>
 
         {/* Mobile Button - Hidden on larger screens */}
-        <div className="hidden lg:block">
-          <Button text={buttonText} className={"self-start"} />
+        <div className="lg:hidden">
+          <Button text={buttonText} className={"self-start flex justify-center items-center"} />
         </div>
       </div>
     </motion.div>

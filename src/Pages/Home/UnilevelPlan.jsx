@@ -48,7 +48,7 @@ const UnilevelPlan = () => {
   return (
     <div className="min-h-screen overflow-hidden bg-linear-to-b from-gray-50 via-white to-gray-50 px-4 py-16 text-gray-800">
       {/* Animated Background */}
-      <div className="absolute inset-0 overflow-hidden">
+      {/* <div className="absolute inset-0 overflow-hidden">
         <motion.div
           animate={{
             scale: [1, 1.2, 1],
@@ -74,7 +74,7 @@ const UnilevelPlan = () => {
           }}
           className="absolute right-1/4 bottom-1/4 h-80 w-80 rounded-full bg-purple-400/10 blur-3xl"
         />
-      </div>
+      </div> */}
 
       <div className="relative z-10 mx-auto max-w-6xl">
         {/* Header Section */}

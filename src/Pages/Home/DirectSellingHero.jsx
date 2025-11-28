@@ -151,22 +151,22 @@ const DirectSellingHero = () => {
             </div>
 
             {/* Floating Feature Badges */}
-            <motion.div
+            {/* <motion.div
               variants={floatAnimation}
               animate="animate"
               className="absolute -top-6 -left-6 rounded-xl border border-purple-400/50 bg-purple-600 px-6 py-3 text-white shadow-lg"
             >
               <div className="text-sm font-semibold">Real-time Stats</div>
-            </motion.div>
+            </motion.div> */}
 
-            <motion.div
+            {/* <motion.div
               variants={floatAnimation}
               animate="animate"
               transition={{ delay: 0.5 }}
               className="absolute -right-6 -bottom-6 rounded-xl border border-purple-300/50 bg-purple-500 px-6 py-3 text-white shadow-lg"
             >
               <div className="text-sm font-semibold">Genealogy Reports</div>
-            </motion.div>
+            </motion.div> */}
           </motion.div>
         </div>
       </div>

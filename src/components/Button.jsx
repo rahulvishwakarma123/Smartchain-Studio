@@ -36,17 +36,20 @@ const buttonVariants = {
 
 const Button = ({ text, className }) => {
   return (
-    <motion.button
-      className={`flex cursor-pointer items-center rounded-full border border-black bg-linear-to-br from-purple-500 via-blue-500 to-cyan-500 px-4 py-3 text-base font-semibold text-white shadow-lg md:px-8 md:py-4 md:text-lg ${className}`}
-      variants={buttonVariants}
-      initial="hidden"
-      whileInView="visible"
-      whileHover="hover"
-      whileTap="tap"
-      viewport={{ once: true, margin: "-50px" }}
-    >
-      {text}
-    </motion.button>
+    // <a >
+      <motion.a
+        href="https://wa.me/9202983564"
+        className={`flex cursor-pointer items-center rounded-full border border-black bg-linear-to-br from-purple-500 via-blue-500 to-cyan-500 px-4 py-3 text-base font-semibold text-white shadow-lg md:px-8 md:py-4 md:text-lg ${className}`}
+        variants={buttonVariants}
+        initial="hidden"
+        whileInView="visible"
+        whileHover="hover"
+        whileTap="tap"
+        viewport={{ once: true, margin: "-50px" }}
+      >
+        {text}
+      </motion.a>
+    // </a>
   );
 };
 

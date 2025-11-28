@@ -115,7 +115,7 @@ const Hero = () => {
             variants={itemVariants}
           >
             <div className="flex items-start gap-4 space-y-4 max-sm:flex-col sm:space-y-0">
-              <Button text={"Request a Call back Now"} />
+              <Button text={"Request a Call back Now"} className={'z-40'}/>
 
               <div className="flex items-center">
                 <span className="text-center text-xl font-medium text-gray-600 sm:text-left sm:text-2xl md:text-3xl">
