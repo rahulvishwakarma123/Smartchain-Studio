@@ -82,7 +82,7 @@ const AchieveMore = () => {
             variants={cardVariants}
           >
             <Button2 text={"Category"}/>
-            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-br from-red-300 to-purple-500 bg-clip-text text-transparent">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold bg-linear-to-br from-red-300 to-purple-500 bg-clip-text text-transparent">
               Product Range
             </h2>
             <p className="text-lg md:text-xl lg:text-2xl">
@@ -95,7 +95,7 @@ const AchieveMore = () => {
             variants={cardVariants}
           >
             <Button2 text={"Category"}/>
-            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-br from-red-300 to-purple-500 bg-clip-text text-transparent">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold bg-linear-to-br from-red-300 to-purple-500 bg-clip-text text-transparent">
               Customer Satisfaction
             </h2>
             <p className="text-lg md:text-xl lg:text-2xl">
@@ -108,7 +108,7 @@ const AchieveMore = () => {
             variants={cardVariants}
           >
             <Button2 text={"Experiences"}/>
-            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-br from-red-300 to-purple-500 bg-clip-text text-transparent">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold bg-linear-to-br from-red-300 to-purple-500 bg-clip-text text-transparent">
               Years of Experience
             </h2>
             <p className="text-lg md:text-xl lg:text-2xl">

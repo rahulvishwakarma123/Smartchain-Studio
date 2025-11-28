@@ -32,7 +32,7 @@ const Navbar = () => {
                 <img
                   className="h-20 w-auto transition-all duration-300 group-hover:scale-110"
                   src={logo}
-                  alt="Nexachain Logo"
+                  alt="Smartchain Studio Logo"
                 />
               </div>
             </div>
