@@ -131,7 +131,7 @@ const MatrixHero = () => {
               className="text-4xl leading-tight font-bold md:text-5xl"
             >
               Solve Your MLM Challenges With Our{" "}
-              <span className="bg-gradiant-to-r from-purple-500 to-purple-600 bg-clip-text text-transparent">
+              <span className="text-purple-600">
                 Proven Matrix MLM Solutions!
               </span>
             </motion.h2>
